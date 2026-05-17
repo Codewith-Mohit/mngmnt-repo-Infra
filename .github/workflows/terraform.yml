@@ -49,7 +49,7 @@ jobs:
         continue-on-error: false
 
       - name: Save Plan Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: tfplan
           path: tfplan
@@ -93,7 +93,7 @@ jobs:
         run: terraform init
 
       - name: Download Plan Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: tfplan
 
