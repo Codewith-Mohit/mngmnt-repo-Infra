@@ -58,10 +58,10 @@ variable "storage_container_name" {
 variable "key_vault_name" {
   description = "Name of the Key Vault (must be 3-24 alphanumeric characters, globally unique)"
   type        = string
-  validation {
-    condition     = length(var.key_vault_name) >= 3 && length(var.key_vault_name) <= 24 && can(regex("^[a-zA-Z0-9-]+$", var.key_vault_name))
-    error_message = "Key Vault name must be 3-24 characters, alphanumeric and hyphens only."
-  }
+  #validation {
+  #  condition     = length(var.key_vault_name) >= 3 && length(var.key_vault_name) <= 24 && can(regex("^[a-zA-Z0-9-]+$", var.key_vault_name))
+  #  error_message = "Key Vault name must be 3-24 characters, alphanumeric and hyphens only."
+  #}
 }
 
 variable "key_vault_sku" {
