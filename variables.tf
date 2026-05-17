@@ -56,7 +56,7 @@ variable "storage_container_name" {
 
 # Key Vault Configuration
 variable "key_vault_name" {
-  description = "Name of the Key Vault (must be 3-24 alphanumeric characters, globally unique)"
+  description = "Name of the Key Vault"
   type        = string
 }
 
