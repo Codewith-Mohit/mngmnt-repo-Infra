@@ -45,7 +45,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -out=tfplan -no-color
+        run: terraform plan -var-file="terraform.tfvars" -out=tfplan -no-color
         continue-on-error: false
 
       - name: Comment PR with Plan (PR only)
@@ -87,4 +87,4 @@ jobs:
         run: terraform init
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve tfplan
+        run: terraform apply -var-file="terraform.tfvars" -auto-approve tfplan
