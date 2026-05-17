@@ -1,0 +1,34 @@
+# Git ignore file for Terraform
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform/
+.terraform.lock.hcl
+tfplan
+tfplan.*
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
+
+# Sensitive files
+.env
+.env.local
+secrets/
+*.pem
+*.key
+*.ppk
+
+# Terraform Cloud/Enterprise
+.tfc-*
